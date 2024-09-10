@@ -1,0 +1,47 @@
+/* <body>
+    <div class="container">
+        <p class="text">This should be styled.</p>
+    </div>
+    <p class="text">This should be unstyled.</p>
+    <p class="text">This should be unstyled.</p>
+    <div class="container">
+        <p class="text">This should be styled.</p>
+        <p class="text">This should be styled.</p>
+    </div>
+</body> */
+
+/* type to type descendent */
+/* div p {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+
+} */
+
+/* type to class descendent */
+/* div .text {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+
+} */
+
+/* class to type descendent */
+.container p {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+/* class to class descendent */
+/* .container .text {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+
+} */
