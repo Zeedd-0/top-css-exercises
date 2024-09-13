@@ -46,3 +46,61 @@ a {
 ul {
   list-style-type: none;
 }
+
+/* SOLUTION */
+/* COMMON RULES */
+.header {
+  padding: 8px;
+}
+
+/* FIRST SOLUTION, WITHOUT ADDING DIV */
+/* without .left-side and .right-side divs
+  and using margin */
+/* this solution doesn't work quite right because of .logo and .links between gap
+  made it with .links {margin-left;}, not the best
+  to make it the same as the SOLUTION just needed to set
+  .links padding and margin values to 0
+  this FIRST solution works best because don't have a lot of property repetion as the SOLUTION itself and
+  is better than SECOND because don´t add divs */
+
+.header,
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.links {
+  padding: 0;
+  margin: 0;
+}
+
+.notifications {
+  margin: 0 0 0 auto;
+}
+
+
+/* SECOND SOLUTION ADDING DIV */
+/* .left-side and .right-side divs were added
+  and using margin */
+/* this solution doesn't work quite right because of .logo and .links between gap
+  to make it the same as the SOLUTION just needed to set
+  .links padding and margin values to 0
+  this SECOND solution works best because don't have a lot of property repetion,
+  even better than the SOLUTION itself */
+
+/* .header,
+.left-side,
+.right-side,
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+} */

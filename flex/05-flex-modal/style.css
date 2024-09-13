@@ -67,3 +67,59 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+/* MY SOLUTION */
+/* although being simple, had to make 6 selectors */
+/* .flex {
+  display: flex;
+}
+
+.modal {
+  padding: 15px;
+  gap: 15px;
+}
+
+.icon {
+  flex: 1 0 auto;
+}
+
+.container {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.head {
+  justify-content: space-between;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 18px;
+} */
+
+/* SOLUTION */
+/* once the html structure is of low complexity, css
+  also is of low structure */
+.modal {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.icon {
+  /* this keeps the icon from getting smashed by the text */
+  flex-shrink: 0;
+}
+/* header container should be wrapped around the button element as well in order for flex style to work */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.text {
+  margin-bottom: 16px;
+}

@@ -24,3 +24,38 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/* SOLUTION */
+/* SOLUTION way is much simpler, less div adding to existing html doc 
+  less flex elements to manage, easier to figure out the structure */
+
+.flex {
+/* in SOLUTION flex is given only for one div,
+  the .info div */ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/* in SOLUTION, text-align: center is given to body */
+  text-align: center;
+}
+
+.page {
+/* in SOLUTION there is no this div
+  instead, it just gave existing .title div a
+  margin-bottom */ 
+  flex-direction: column;
+  gap: 32px;
+}
+
+.info-row /* SOLUTION's .container div */ {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 52px;
+}
+
+.card /* SOLUTION's .info div */ {
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 0 1 200px;
+}

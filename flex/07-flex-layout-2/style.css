@@ -27,3 +27,84 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* MY SOLUTION */
+/* My solution is quite good again
+  spotlight to flex property management to element,
+  same result of SOLUTION, different and somewhat better way
+  SOLUTION gave display: flex to .header and .footer divs to vertical-align the text innit */
+
+  * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* for some reason, don't need this justify-content
+    have used it to get .header stick to top and .footer
+    to stick to bottom
+    it seems dont't need it because the content by itself gets all height
+    the question is, why and when (with which rule and property) */  
+  justify-content: space-between;
+}
+
+.body,
+.header,
+.container,
+.footer {
+  display: flex;
+  /* didn't need this flex-direction, it doesn't inherit from body */  
+  flex-direction: row;
+  /* SOLUTION gives a flex: 1, to .body, to the content grow and shrink, i didn't
+    because i gave content flex grow and shrink to .container, a 
+    .body children, then i didn't have to give .sidebar any flex-shrink
+    in SOLUTION, it had to give .sidebar a flex-shrink because it shrank with
+    .body */
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 900;
+  padding: 16px;
+  align-items: center;
+}
+
+.sidebar {
+  padding: 16px;
+}
+
+.footer {
+  align-items: center;
+  justify-content: center;
+}
+
+ul > li {
+  /* gave list-style to li instead of ul so i could keep only one selector */
+  list-style: none;
+  /* i haven't given margin-bottom because it wasn't clear to do it */
+  margin-bottom: 16px;
+}
+
+a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.container {
+  padding: 48px;
+  flex-wrap: wrap;
+  gap: 32px;
+  flex: 1 0 0;
+}
+
+.card {
+  /* .card has a different size from SOLUTION because
+    i using box-sizing: boder-box (on global, *, selector)
+    and it is using default, content-box */
+  padding: 16px;
+  flex: 0 0 300px;
+}

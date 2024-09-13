@@ -8,13 +8,49 @@
     <title>Modal</title>
   </head>
   <body>
-    <div class="modal">
+    <!-- <div class="modal">
       <div class="icon">!</div>
       <div class="header">Are you sure you want to do that?</div>
       <button class="close-button">✖</button>
       <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
       <button class="continue">Continue</button>
       <button class="cancel">Cancel</button>
+    </div> -->
+
+    <!-- MY SOLUTION
+        Added three divs, have three flex elements
+        lot structure change and complexity to read increased -->
+    <!-- <div class="modal flex">
+      <div class="icon">!</div>
+        <div class="container flex">
+          <div class="head flex">
+            <div class="header">Are you sure you want to do that?</div>
+            <button class="close-button">✖</button>  
+          </div>
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
+          <div class="button-row">
+            <button class="continue">Continue</button>
+            <button class="cancel">Cancel</button>
+          </div>
+        </div>
+    </div> -->
+    
+    <!-- SOLUTION
+         Just created one additional div, two flex elements
+         little structure change, little complexity to understand structure -->
+    <div class="modal">
+      <div class="icon">!</div>
+      <!-- additional container used here -->
+      <div class="container">
+        <!-- header div was moved to encompass the close button as well -->
+        <div class="header">Are you sure you want to do that?
+          <button class="close-button">✖</button>
+        </div>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
+        <button class="continue">Continue</button>
+        <button class="cancel">Cancel</button>
+      </div>
     </div>
+
   </body>
 </html>

@@ -24,3 +24,65 @@ input {
   padding: 8px 24px;
   width: 400px;
 }
+
+
+/* MY SOLUTION */
+/* solution quite good
+  simpler solution with a simpler property
+  couldn't make work with a simpler property in one selector
+  could have give property to other element so would have used one less selector
+  with these changes, could transform my css to SOLUTION's easily
+  mine would have avoided display: flex duplicate */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, .content,
+.header, .header > ul,
+.footer, .footer > ul {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+  /* without this justify-content, i would have neede flex: 1, as need it the SOLUTION */
+  justify-content: space-between;
+}
+
+.content {
+  align-items: center;
+  /* could have made this justify-items a justify-content: center */
+  justify-items: stretch;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buttons > button {
+  padding: 8px 16px;
+}
+
+.header, .footer {
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.header > ul, .footer > ul {
+  gap: 16px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+li {
+  /* could have given this list-style directly to ul
+  didn't needed this li selector */
+  list-style: none;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}

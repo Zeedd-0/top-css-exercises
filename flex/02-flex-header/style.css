@@ -23,3 +23,51 @@ a {
   /* this removes the line under the links */
   text-decoration: none;
 }
+
+/* SOLUTION */
+/* COMMON RULES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 80px; /* didn't need it */
+  margin: 5px; /* need it because mas set to 0px on global */
+  padding: 10px;
+}
+
+/* FIRST SOLUTION, WITH MARGIN */
+.header,
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+/* SECOND SOLUTION, WITH FLEX PROPERTY */
+/* it doesn't work because the logo div gets bigger
+   on desired solution, it doesn´t */
+/* .header,
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  text-align: center;
+  flex: 1;
+} */
+
+/* SOLUTION IS MUCH BETTER BECAUS */
+/* #1 it uses less selectors (2 against 3 mine)
+   #2 is much simpler (simpler, better) */
